@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Noisy Image</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Noisy Image and Color Distribution Graphs</h1>
+
+        {% if noisy_image %}
+        <h2>Noisy Image:</h2>
+        <img src="data:image/png;base64,{{ noisy_image }}" alt="Noisy Image">
+        <h2>Color Distribution Graphs:</h2>
+        <img src="data:image/png;base64,{{ histogram }}" alt="Color Distribution Graphs">
+        {% endif %}
+
+        <a href="/" class="btn btn-primary">Go Back to Main Page</a>
+    </div>
+</body>
+</html>
